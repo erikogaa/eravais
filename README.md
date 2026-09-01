@@ -8,7 +8,7 @@
 
 | Поле | Что это |
 |---|---|
-| `name` | Имя в шапке, подписи под цитатой и в футере |
+| `name` | Имя в шапке и в футере |
 | `phone` | Номер для WhatsApp — только цифры: `77064254635` |
 | `phoneDisplay` | Как номер показывается на сайте |
 | `telegram` | Ник в Telegram, без `@` |
@@ -17,6 +17,8 @@
 | `kaspiPhone` | Номер для перевода в Kaspi (как показывать) |
 | `kaspiPhoneCopy` | Что копируется по кнопке — формат `87064254635` |
 | `kaspiName` | Имя получателя, как в Kaspi |
+| `youtube` | Ссылка на канал. Пусто — кнопки YouTube не будет |
+| `youtubeLabel` | Подпись под кнопкой YouTube |
 | `donationAlerts` | Ник в DonationAlerts → `donationalerts.com/r/НИК` |
 
 ## Фото

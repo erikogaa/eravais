@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ерик Жандильда — помощь при лудомании</title>
-<meta name="description" content="15 лет в ставках, 6 лет без игры. Помог более 1000 людям выйти из лудомании. Индивидуальные консультации онлайн и офлайн.">
+<meta name="description" content="Играл в ставки 15 лет, проиграл больше 5 миллионов и ослеп на один глаз. Шесть лет не играю. Помогаю выбраться из лудомании: онлайн и вживую, без нотаций.">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ерик Жандильда — помощь при лудомании">
-<meta property="og:description" content="15 лет в ставках. 6 лет без игры. Помог 1000+ людям. Индивидуальная работа онлайн и офлайн.">
+<meta property="og:description" content="Проиграл больше 5 миллионов и ослеп на один глаз. Шесть лет не играю и помогаю выбраться другим.">
 <meta property="og:image" content="erik.jpg">
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23000'/%3E%3Cpath d='M27 53l16 16 31-38' stroke='%23e3a765' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -121,6 +121,19 @@ h3{font-size:21px;line-height:1.19;font-weight:600;letter-spacing:.011em}
 .lk.accent .i{background:rgba(32,21,6,.13);color:var(--acc-ink)}
 .lk.accent:hover{background:var(--acc-hover);border-color:var(--acc-hover)}
 
+/* --- микрокопия под кнопками --- */
+.note{font-size:14px;line-height:1.45;color:var(--fg2);letter-spacing:-.016em;
+  max-width:540px;margin:18px auto 0;text-align:center}
+
+/* --- шаги --- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px;text-align:left}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr;margin-top:32px}}
+.step{background:var(--card2);border:1px solid var(--line);border-radius:18px;padding:24px 22px}
+.step b{display:block;font-size:14px;font-weight:600;color:var(--acc);letter-spacing:.03em;margin-bottom:14px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{font-size:15px;color:var(--fg2);line-height:1.5;letter-spacing:-.016em}
+
 /* --- цифры --- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
 @media(max-width:900px){.stats{grid-template-columns:1fr 1fr;gap:44px 20px}}
@@ -187,10 +200,11 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
     <div class="nav-links">
       <a href="#links">Контакты</a>
       <a href="#about">Обо мне</a>
-      <a href="#help">Чем помогаю</a>
+      <a href="#how">Как это работает</a>
+      <a href="#family">Близким</a>
       <a href="#donate">Поддержать</a>
     </div>
-    <a class="nav-cta" data-wa href="#">Записаться</a>
+    <a class="nav-cta" data-wa href="#">Написать</a>
   </div>
 </nav>
 
@@ -198,12 +212,14 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
 <div id="top" class="black">
   <div class="w hero">
     <p class="eyebrow">Помощь при лудомании</p>
-    <h1>Из лудомании<br>есть выход.</h1>
-    <p class="sub dim-d">15 лет в ставках. 6 лет без игры.<br>Помог более 1000 людям. Я прошёл этот путь сам.</p>
+    <h1>Я играл 15 лет.<br>Шесть лет не играю.</h1>
+    <p class="sub dim-d">Проиграл больше 5 миллионов. Из-за ставок ослеп на один глаз.<br>Знаю, каково это, и знаю, что можно перестать.</p>
     <div class="cta-row">
-      <a class="pill" data-wa href="#">Записаться</a>
-      <a class="tlink" href="#about">Как это работает <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a class="pill" data-wa href="#">Написать мне</a>
+      <a class="tlink" href="#how">Как это работает <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
     </div>
+    <p class="note">Нет денег на консультацию? Напишите и скажите сразу, что-нибудь придумаем.
+      О том, что вы мне написали, не узнает никто.</p>
     <div class="hero-photo">
       <img id="photo" data-src="erik.jpg" alt="" hidden>
       <div class="ph-note" id="photoPh">Положите фото рядом с <code>index.html</code> под именем <code>erik.jpg</code></div>
@@ -243,10 +259,11 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
 
       <a class="lk" href="#donate">
         <span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-        <span class="t"><b>Поддержать</b><span>Оплатить консультацию тому, кто не может</span></span>
+        <span class="t"><b>Поддержать</b><span>Оплатить консультацию тому, у кого нет денег</span></span>
         <span class="a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
       </a>
     </div>
+    <p class="note">Отвечаю сам, не менеджер и не помощник. Ни жена, ни родители, ни на работе никто не узнает.</p>
   </div>
 </section>
 
@@ -263,15 +280,60 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
 <!-- ОБО МНЕ -->
 <section id="about" class="sec">
   <div class="w center">
-    <h2 class="narrow">Я знаю эту зависимость изнутри</h2>
+    <h2 class="narrow">Я не буду вас отчитывать</h2>
     <p class="sub dim narrow" style="margin-top:22px">
-      Я не буду стыдить и читать нотации. Стыд не выводит из зависимости — он загоняет глубже.
-      Я знаю, как рождается мысль «сегодня отыграюсь» и как выглядит утро после проигрыша.
+      Вам и так всё сказали. Родные сказали, и сами вы себе говорили не раз.
+      Ещё одна лекция ничего не поменяет, от стыда играть тянет только сильнее. Я это проходил.
     </p>
     <p class="body dim narrow" style="margin-top:20px">
-      Моя работа — конкретные шаги: перекрыть доступ к игре, разобраться с деньгами и долгами,
-      выстроить поддержку. Работаю и с самим играющим, и с близкими.
+      Пятнадцать лет ставок обошлись мне в пять с лишним миллионов и один глаз. Он ослеп, и это
+      уже не вернуть. Так что чем всё это заканчивается, я знаю не по книжкам и не по чужим историям.
     </p>
+    <p class="body dim narrow" style="margin-top:20px">
+      Знаю, как в голове появляется «ну сегодня точно отыграюсь». Что творится утром, когда открываешь
+      банк и смотришь на остаток. Что вы говорите дома и как быстро это перестают слушать.
+    </p>
+    <p class="body dim narrow" style="margin-top:16px">
+      Поэтому разговор будет не про силу воли. Закрываем доступ к деньгам, садимся за долги, ищем,
+      чем занять вечера. И находим рядом человека, который заметит, если вы сорвётесь.
+    </p>
+    <p class="body dim narrow" style="margin-top:20px">
+      Мне нужно от вас одно: чтобы вы перестали ставить. Всё остальное потом.
+    </p>
+  </div>
+</section>
+
+<!-- ЧТО БУДЕТ ДАЛЬШЕ -->
+<section id="how" class="sec gray">
+  <div class="w">
+    <h2 class="center">Что будет, если вы напишете</h2>
+    <p class="sub dim narrow center" style="margin-top:18px">Готовиться не надо. Держаться неделю, чтобы прийти «достойно», тоже не надо.</p>
+    <div class="steps">
+      <div class="step rv"><b>01</b><h3>Вы пишете</h3><p>Хоть одно «здравствуйте». Расписывать ничего не надо, дальше спрошу я.</p></div>
+      <div class="step rv"><b>02</b><h3>Разговор</h3><p>Спрошу, что у вас сейчас и насколько всё плохо. Это вас ещё ни к чему не обязывает.</p></div>
+      <div class="step rv"><b>03</b><h3>Встреча</h3><p>Созвон или вживую. Смотрим, что делать прямо на этой неделе.</p></div>
+      <div class="step rv"><b>04</b><h3>Дальше</h3><p>Остаёмся на связи. Первый месяц тяжелее всего, и проходить его одному не надо.</p></div>
+    </div>
+    <p class="note" style="max-width:660px">Обещать «больше никогда» я не попрошу.
+      Вы это уже обещали, и не один раз. Начнём с ближайших нескольких дней.</p>
+  </div>
+</section>
+
+<!-- БЛИЗКИМ -->
+<section id="family" class="sec">
+  <div class="w center">
+    <h2 class="narrow">Если играет ваш близкий</h2>
+    <p class="sub dim narrow" style="margin-top:20px">
+      Обычно первой пишет жена. Или мама. Сам игрок доходит до этого последним,
+      если вообще доходит.
+    </p>
+    <p class="body dim narrow" style="margin-top:18px">
+      С близкими я работаю отдельно, потому что вопросы у вас другие. Гасить его долги или нет.
+      Забирать карты или это только озлобит. Что отвечать, когда он врёт вам в лицо.
+      И как понять, где вы помогаете, а где сами оплачиваете ему следующую ставку.
+    </p>
+    <a class="pill" data-wa-family href="#" style="margin-top:28px">Написать о близком</a>
+    <p class="note">Тащить его с собой не надо. Работать можно и когда он уверен, что всё у него под контролем.</p>
   </div>
 </section>
 
@@ -280,10 +342,10 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
   <div class="w">
     <h2 class="center">Чем помогаю</h2>
     <div class="cards">
-      <div class="card rv"><h3>Консультации</h3><p>Онлайн из любой точки мира или личная встреча.</p></div>
-      <div class="card rv"><h3>Работа с близкими</h3><p>Что делать семье, когда играет родной человек.</p></div>
-      <div class="card rv"><h3>Деньги и долги</h3><p>Как перекрыть доступ к счетам и разобраться с займами.</p></div>
-      <div class="card rv"><h3>Сопровождение</h3><p>Поддержка на дистанции и профилактика срывов.</p></div>
+      <div class="card rv"><h3>Консультации</h3><p>Созвон из любой точки мира или встреча вживую.</p></div>
+      <div class="card rv"><h3>Деньги и долги</h3><p>Закрыть себе доступ к счетам, разобрать кредиты и микрозаймы.</p></div>
+      <div class="card rv"><h3>Первые недели</h3><p>Самое тяжёлое время. На связи хоть каждый день, пока не отпустит.</p></div>
+      <div class="card rv"><h3>Срывы</h3><p>Сорвались, это ещё не конец. Разберём почему и пойдём дальше.</p></div>
     </div>
   </div>
 </section>
@@ -294,8 +356,8 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
     <div class="dbox center">
       <h2>Поддержать</h2>
       <p class="sub dim narrow" style="margin-top:16px">
-        Часть людей приходит без денег — им я помогаю бесплатно.
-        Ваш донат оплачивает консультацию такому человеку.
+        Кто-то приходит совсем без денег: долги, кредиты, ноль на карте.
+        С такими я работаю бесплатно. Если переведёте, вы оплатите консультацию такому человеку.
       </p>
       <div class="dgrid">
         <div class="dcard">
@@ -321,14 +383,14 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
           </div>
         </div>
       </div>
-      <p class="dnote">Донат — добровольная поддержка, а не оплата консультации. Нужна помощь — просто напишите.</p>
+      <p class="dnote">Это не оплата услуг, а просто помощь проекту. Если помощь нужна вам самим, ничего не переводите, а напишите мне.</p>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="w foot">
-    <span>© <span id="yr">2026</span> <span data-name>Ерик</span>. Помощь при игровой зависимости.</span>
+    <span>© <span id="yr">2026</span> <span data-name>Ерик</span>. Помощь при лудомании.</span>
     <span class="foot-links">
       <a data-wa href="#">WhatsApp</a>
       <a data-tg href="#">Telegram</a>
@@ -338,7 +400,7 @@ footer{background:var(--bg2);padding:34px 0;font-size:12px;color:var(--fg2);line
   </div>
 </footer>
 
-<div class="buybar"><a class="pill" data-wa href="#">Записаться в WhatsApp</a></div>
+<div class="buybar"><a class="pill" data-wa href="#">Написать в WhatsApp</a></div>
 
 <script>
 /* ====================================================================
@@ -352,7 +414,8 @@ const CONFIG = {
   instagram:     "eravais",              // без @
   youtube:       "https://www.youtube.com/@Erikzhandilda",  // пусто — кнопки не будет
   youtubeLabel:  "@Erikzhandilda",       // подпись под кнопкой YouTube
-  waText:        "Здравствуйте! Пишу с сайта — хочу записаться на консультацию.",
+  waText:        "Здравствуйте! Пишу с сайта.",
+  waTextFamily:  "Здравствуйте! Пишу с сайта, у меня играет близкий человек.",
   photoAlt:      "Ерик Жандильда",       // подпись к фото для поисковиков
 
   // --- донаты ---
@@ -370,7 +433,9 @@ const CONFIG = {
   const igUrl = 'https://instagram.com/' + CONFIG.instagram;
   const daUrl = 'https://www.donationalerts.com/r/' + CONFIG.donationAlerts;
 
+  const waFamUrl = 'https://wa.me/' + CONFIG.phone + '?text=' + encodeURIComponent(CONFIG.waTextFamily);
   q('[data-wa]').forEach(e => { e.href = waUrl; e.target = '_blank'; e.rel = 'noopener'; });
+  q('[data-wa-family]').forEach(e => { e.href = waFamUrl; e.target = '_blank'; e.rel = 'noopener'; });
   q('[data-tg]').forEach(e => { e.href = tgUrl; e.target = '_blank'; e.rel = 'noopener'; });
   q('[data-ig]').forEach(e => e.href = igUrl);
   q('[data-da]').forEach(e => e.href = daUrl);
