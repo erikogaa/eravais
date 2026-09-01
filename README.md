@@ -42,39 +42,37 @@ QR появится на сайте сам. Пока файла нет — вм�
 3. Подключи вывод средств и включи нужные способы оплаты (карты, кошельки, крипта).
 4. Впиши этот ник в `CONFIG.donationAlerts`.
 
-## Публикация на GitHub Pages (бесплатно)
+## Сайт опубликован
 
-1. Зарегистрируйся на https://github.com
-2. Создай репозиторий с именем `<твой-логин>.github.io` — **Public**.
-3. Залей файлы:
+**https://erikogaa.github.io/eravais/**
 
-```bash
-cd "/Users/erikogaj/Ерик Сайт" && git init -b main && git add index.html README.md erik.jpg && git commit -m "site" && git remote add origin https://github.com/ЛОГИН/ЛОГИН.github.io.git && git push -u origin main
-```
+Репозиторий: https://github.com/erikogaa/eravais
 
-4. В репозитории: **Settings → Pages → Source: Deploy from a branch → main / (root) → Save**.
-5. Через 1–2 минуты сайт открыт по адресу `https://ЛОГИН.github.io`
+### Как обновить сайт
 
-Каждое обновление:
+Git на этом Маке не настроен, поэтому проще всего через браузер:
 
-```bash
-cd "/Users/erikogaj/Ерик Сайт" && git add -A && git commit -m "update" && git push
-```
+1. Открой https://github.com/erikogaa/eravais
+2. **Add file → Upload files**
+3. Перетащи изменённый `index.html` (или `kaspi-qr.png`) — файл с тем же именем заменится
+4. **Commit changes**
+
+Через 1–2 минуты изменения на сайте. Если не видно — обнови страницу с Cmd+Shift+R.
 
 ## Свой домен (позже)
 
-Купи домен (например `eravais.kz`), затем в **Settings → Pages → Custom domain** впиши его,
-а у регистратора добавь записи:
+Купи домен (например `eravais.kz`), затем в репозитории **Settings → Pages → Custom domain**
+впиши его, а у регистратора добавь записи:
 
 ```
 A   @   185.199.108.153
 A   @   185.199.109.153
 A   @   185.199.110.153
 A   @   185.199.111.153
-CNAME  www  ЛОГИН.github.io
+CNAME  www  erikogaa.github.io
 ```
 
-HTTPS включится автоматически (галочка «Enforce HTTPS»).
+HTTPS включится сам (галочка «Enforce HTTPS»).
 
 ## Локальный просмотр
 
