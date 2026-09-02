@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ерик Жандильда — помощь при лудомании</title>
-<meta name="description" content="Играл в ставки 15 лет, проиграл больше 5 миллионов и ослеп на один глаз. Шесть лет не играю. Помогаю выбраться из лудомании: онлайн и вживую, без нотаций.">
+<meta name="description" content="Ставил ставки 15 лет, проиграл больше 30 миллионов, ослеп правый глаз. 6 лет в чистоте. Помогаю выстроить систему, чтобы бросить игру и не вернуться обратно.">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ерик Жандильда — помощь при лудомании">
-<meta property="og:description" content="Проиграл больше 5 миллионов и ослеп на один глаз. Шесть лет не играю и помогаю выбраться другим.">
+<meta property="og:description" content="Проиграл больше 30 миллионов, ослеп правый глаз, был на дне. 6 лет в чистоте. Помогаю бросить игру и не вернуться обратно.">
 <meta property="og:image" content="https://erikogaa.github.io/eravais/erik.jpg">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="640">
@@ -213,6 +213,8 @@ h2+.prose{margin-top:30px}
 @media(max-width:734px){.dbox{padding:36px 22px;border-radius:22px}}
 .dgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:38px;text-align:left}
 @media(max-width:734px){.dgrid{grid-template-columns:minmax(0,1fr)}}
+.dgrid.one{grid-template-columns:minmax(0,1fr);max-width:440px;margin-left:auto;margin-right:auto}
+.req.last{margin-bottom:0}
 .dcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
 .dcard h3{font-size:17px;margin-bottom:18px}
 .req{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
@@ -221,16 +223,14 @@ h2+.prose{margin-top:30px}
 .req .lbl{font-size:12px;color:var(--fg2);letter-spacing:-.01em;line-height:1.2}
 .req .val{font-size:17px;font-weight:600;letter-spacing:-.022em;word-break:break-word;line-height:1.25}
 .req .val.url{font-size:14.5px;letter-spacing:-.01em}
+.req .val.num{font-variant-numeric:tabular-nums;letter-spacing:.01em}
+@media(max-width:380px){.req .val.num{font-size:15.5px}}
 @media(max-width:380px){.req .val.url{font-size:13px}}
 .copy{background:none;border:none;color:var(--acc);font-size:15px;font-family:inherit;font-weight:500;
   cursor:pointer;padding:13px 8px;margin:-13px -8px;white-space:nowrap;letter-spacing:-.016em}
+.copy{margin-left:auto}
 .copy:hover{color:var(--acc-hover)}
 .copy.done{color:#6ecb8c}
-.pill-full{width:100%}
-.qr{margin-top:16px}
-.qr img{width:160px;height:160px;border-radius:14px;background:#fff;padding:8px;margin:0 auto}
-.qr-ph{border:1.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--fg2);font-size:13px;line-height:1.5;text-align:center}
-.qr-ph code{background:rgba(255,255,255,.08);padding:2px 5px;border-radius:4px}
 .dnote{margin-top:24px;font-size:14px;color:var(--fg2);line-height:1.5;letter-spacing:-.014em}
 
 /* --- футер --- */
@@ -281,15 +281,15 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
   <div class="w hero-in">
     <div class="hero-text">
       <p class="eyebrow">Помощь при лудомании</p>
-      <h1>Я играл 15 лет.<br>Шесть лет не играю.</h1>
-      <p class="sub">Проиграл больше 5 миллионов. Из-за ставок ослеп на один глаз.
-        Знаю, каково это, и знаю, что можно перестать.</p>
+      <h1>Я ставил ставки 15 лет.<br>6 лет в чистоте.</h1>
+      <p class="sub">Проиграл более 30 млн, ослеп правый глаз, был на дне.
+        Понимаю как никто, что ты проходишь.</p>
       <div class="cta-row">
         <a class="pill" data-wa href="https://wa.me/77064254635" target="_blank" rel="noopener">Написать мне</a>
         <a class="tlink" href="#how">Что будет дальше <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
       </div>
-      <p class="note">Нет денег на консультацию? Напишите и скажите сразу, что-нибудь придумаем.
-        О том, что вы мне написали, не узнает никто.</p>
+      <p class="note">Нет денег на консультацию? Напиши и скажи сразу, что-нибудь придумаем.
+        О том, что ты мне написал, не узнает никто.</p>
     </div>
     <div class="hero-photo">
       <img id="photo" data-src="erik.jpg" alt="" hidden>
@@ -341,7 +341,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
 <section class="sec gray">
   <div class="w stats">
     <div class="stat rv"><b data-count="15">15</b><span>лет в ставках</span></div>
-    <div class="stat rv"><b data-count="6">6</b><span>лет без игры</span></div>
+    <div class="stat rv"><b data-count="6">6</b><span>лет в чистоте</span></div>
     <div class="stat rv"><b data-count="1000" data-suffix="+">1000+</b><span>человек, которым помог</span></div>
     <div class="stat rv"><b data-count="21" data-suffix="K">21K</b><span>подписчиков на YouTube</span></div>
   </div>
@@ -350,26 +350,26 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
 <!-- ОБО МНЕ -->
 <section id="about" class="sec">
   <div class="w center">
-    <h2 class="narrow">Я не буду вас отчитывать</h2>
+    <h2 class="narrow">Я не буду тебя осуждать</h2>
     <div class="prose">
     <p class="sub">
-      Вам и так всё сказали. Родные сказали, и сами вы себе говорили не раз.
-      Ещё одна лекция ничего не поменяет, от стыда играть тянет только сильнее. Я это проходил.
+      Ты устал от игры. Долги, чувство вины, проблемы в семье, постоянное напряжение,
+      возможно, уже и депрессия.
     </p>
     <p class="body dim">
-      Пятнадцать лет ставок обошлись мне в пять с лишним миллионов и один глаз. Он ослеп, и это
-      уже не вернуть. Так что чем всё это заканчивается, я знаю не по книжкам и не по чужим историям.
+      Сколько раз ты себе обещал: «Всё, больше не играю», но снова возвращался?
     </p>
     <p class="body dim">
-      Знаю, как в голове появляется «ну сегодня точно отыграюсь». Что творится утром, когда открываешь
-      банк и смотришь на остаток. Что вы говорите дома и как быстро это перестают слушать.
+      Вопрос не в силе воли. У тебя просто нет системы, как бросить игру
+      и не вернуться обратно.
     </p>
     <p class="body dim">
-      Поэтому разговор будет не про силу воли. Закрываем доступ к деньгам, садимся за долги, ищем,
-      чем занять вечера. И находим рядом человека, который заметит, если вы сорвётесь.
+      Я помогу тебе выстроить эту систему. Пятнадцать лет ставок обошлись мне
+      в 30 с лишним миллионов и один глаз — правый ослеп, и это уже не вернуть.
+      Так что чем всё заканчивается, я знаю не по книжкам и не по чужим историям.
     </p>
     <p class="body dim">
-      Мне нужно от вас одно: чтобы вы перестали ставить. Всё остальное потом.
+      Дальше всё зависит от тебя.
     </p>    </div>
 
   </div>
@@ -378,16 +378,17 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
 <!-- ЧТО БУДЕТ ДАЛЬШЕ -->
 <section id="how" class="sec gray">
   <div class="w">
-    <h2 class="center">Что будет, если вы напишете</h2>
+    <h2 class="center">Что будет, если ты напишешь</h2>
     <p class="sub dim narrow center" style="margin-top:18px">Готовиться не надо. Держаться неделю, чтобы прийти «достойно», тоже не надо.</p>
     <div class="steps">
-      <div class="step rv"><b>01</b><h3>Вы пишете</h3><p>Хоть одно «здравствуйте». Расписывать ничего не надо, дальше спрошу я.</p></div>
-      <div class="step rv"><b>02</b><h3>Разговор</h3><p>Спрошу, что у вас сейчас и насколько всё плохо. Это вас ещё ни к чему не обязывает.</p></div>
-      <div class="step rv"><b>03</b><h3>Встреча</h3><p>Созвон или вживую. Смотрим, что делать прямо на этой неделе.</p></div>
+      <div class="step rv"><b>01</b><h3>Ты пишешь</h3><p>Хоть одно «здравствуйте». Расписывать ничего не надо, дальше спрошу я.</p></div>
+      <div class="step rv"><b>02</b><h3>Разговор</h3><p>Разберём твою ситуацию: что у тебя сейчас и насколько всё плохо. Это тебя ещё ни к чему не обязывает.</p></div>
+      <div class="step rv"><b>03</b><h3>Система</h3><p>Созвон или вживую. Начинаем работать: что делать прямо на этой неделе.</p></div>
       <div class="step rv"><b>04</b><h3>Дальше</h3><p>Остаёмся на связи. Первый месяц тяжелее всего, и проходить его одному не надо.</p></div>
     </div>
-    <p class="note" style="max-width:660px">Обещать «больше никогда» я не попрошу.
-      Вы это уже обещали, и не один раз. Начнём с ближайших нескольких дней.</p>
+    <p class="note" style="max-width:660px">Если ты действительно хочешь бросить — напиши мне.
+      Обещать «больше никогда» я не попрошу: ты это уже обещал, и не один раз.
+      Начнём с ближайших нескольких дней.</p>
   </div>
 </section>
 
@@ -397,6 +398,9 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
     <h2 class="narrow">Если играет ваш близкий</h2>
     <div class="prose">
     <p class="sub">
+      Напишите мне — я вас бесплатно проконсультирую и дам шаги, которые помогут вам.
+    </p>
+    <p class="body dim">
       Обычно первой пишет жена. Или мама. Сам игрок доходит до этого последним,
       если вообще доходит.
     </p>
@@ -406,7 +410,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
       И как понять, где вы помогаете, а где сами оплачиваете ему следующую ставку.
     </p>    </div>
 
-    <a class="pill" data-wa-family href="https://wa.me/77064254635" target="_blank" rel="noopener" style="margin-top:28px">Написать о близком</a>
+    <a class="pill" data-wa-family href="https://wa.me/77064254635" target="_blank" rel="noopener" style="margin-top:28px">Бесплатная консультация</a>
     <p class="note">Тащить его с собой не надо. Работать можно и когда он уверен, что всё у него под контролем.</p>
   </div>
 </section>
@@ -419,7 +423,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
       <div class="card rv"><h3>Консультации</h3><p>Созвон из любой точки мира или встреча вживую.</p></div>
       <div class="card rv"><h3>Деньги и долги</h3><p>Закрыть себе доступ к счетам, разобрать кредиты и микрозаймы.</p></div>
       <div class="card rv"><h3>Первые недели</h3><p>Самое тяжёлое время. На связи хоть каждый день, пока не отпустит.</p></div>
-      <div class="card rv"><h3>Срывы</h3><p>Сорвались, это ещё не конец. Разберём почему и пойдём дальше.</p></div>
+      <div class="card rv"><h3>Срывы</h3><p>Сорвался — это ещё не конец. Разберём почему и пойдём дальше.</p></div>
     </div>
   </div>
 </section>
@@ -433,27 +437,19 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:38px 0;fon
         Кто-то приходит совсем без денег: долги, кредиты, ноль на карте.
         С такими я работаю бесплатно. Если переведёте, вы оплатите консультацию такому человеку.
       </p>
-      <div class="dgrid">
+      <div class="dgrid one">
         <div class="dcard">
           <h3>Kaspi</h3>
           <div class="req">
-            <span><span class="lbl">Номер</span><span class="val" data-kaspi-display>+7 706 425 46 35</span></span>
-            <button class="copy" data-copy-kaspi>Копировать</button>
+            <span><span class="lbl">Номер</span><span class="val" data-kaspi-display>+7 747 062 49 95</span></span>
+            <button class="copy" type="button" data-copy-kaspi aria-label="Скопировать номер Kaspi">Копировать</button>
           </div>
           <div class="req">
-            <span><span class="lbl">Получатель</span><span class="val" data-kaspi-name>Ерик</span></span>
+            <span><span class="lbl">Номер карты</span><span class="val num" data-kaspi-card>4400 4303 5856 9322</span></span>
+            <button class="copy" type="button" data-copy-card aria-label="Скопировать номер карты">Копировать</button>
           </div>
-          <div class="qr">
-            <img alt="Kaspi QR" id="kaspiQr" data-src="kaspi-qr.png" hidden>
-            <div class="qr-ph" id="kaspiQrPh">QR из Kaspi → сохранить как <code>kaspi-qr.png</code> рядом с <code>index.html</code></div>
-          </div>
-        </div>
-        <div class="dcard">
-          <h3>Картой из любой страны</h3>
-          <a class="pill pill-full" data-da href="https://www.donationalerts.com/r/eravais" target="_blank" rel="noopener">DonationAlerts</a>
-          <div class="req" style="margin-top:14px;margin-bottom:0">
-            <span><span class="lbl">Ссылка</span><span class="val url" data-da-display>donationalerts.com/r/eravais</span></span>
-            <button class="copy" data-copy-da>Копировать</button>
+          <div class="req last">
+            <span><span class="lbl">Получатель</span><span class="val" data-kaspi-name>Ерик Ж.</span></span>
           </div>
         </div>
       </div>
@@ -493,10 +489,11 @@ const CONFIG = {
   photoAlt:      "Ерик Жандильда",       // подпись к фото для поисковиков
 
   // --- донаты ---
-  kaspiPhone:     "+7 706 425 46 35",    // номер для перевода в Kaspi
-  kaspiPhoneCopy: "87064254635",         // что копируется по кнопке (формат Kaspi)
-  kaspiName:      "Ерик",                // имя получателя, как в Kaspi
-  donationAlerts: "eravais"              // ник → donationalerts.com/r/НИК
+  kaspiPhone:     "+7 747 062 49 95",    // номер для перевода в Kaspi
+  kaspiPhoneCopy: "87470624995",         // что копируется по кнопке (формат Kaspi)
+  kaspiCard:      "4400 4303 5856 9322", // номер карты Visa, как показывается
+  kaspiCardCopy:  "4400430358569322",    // что копируется по кнопке (без пробелов)
+  kaspiName:      "Ерик Ж."              // имя получателя, как в Kaspi
 };
 /* ================== ниже ничего менять не нужно ==================== */
 
@@ -505,14 +502,12 @@ const CONFIG = {
   const waUrl = 'https://wa.me/' + CONFIG.phone + '?text=' + encodeURIComponent(CONFIG.waText);
   const tgUrl = 'https://t.me/' + CONFIG.telegram;
   const igUrl = 'https://instagram.com/' + CONFIG.instagram;
-  const daUrl = 'https://www.donationalerts.com/r/' + CONFIG.donationAlerts;
 
   const waFamUrl = 'https://wa.me/' + CONFIG.phone + '?text=' + encodeURIComponent(CONFIG.waTextFamily);
   q('[data-wa]').forEach(e => { e.href = waUrl; e.target = '_blank'; e.rel = 'noopener'; });
   q('[data-wa-family]').forEach(e => { e.href = waFamUrl; e.target = '_blank'; e.rel = 'noopener'; });
   q('[data-tg]').forEach(e => { e.href = tgUrl; e.target = '_blank'; e.rel = 'noopener'; });
   q('[data-ig]').forEach(e => e.href = igUrl);
-  q('[data-da]').forEach(e => e.href = daUrl);
 
   /* YouTube: появляется, только если ссылка заполнена */
   const yt = (CONFIG.youtube || '').trim();
@@ -525,18 +520,22 @@ const CONFIG = {
   q('[data-tg-handle]').forEach(e => e.textContent = '@' + CONFIG.telegram);
   q('[data-ig-handle]').forEach(e => e.textContent = '@' + CONFIG.instagram);
   q('[data-kaspi-display]').forEach(e => e.textContent = CONFIG.kaspiPhone);
+  q('[data-kaspi-card]').forEach(e => e.textContent = CONFIG.kaspiCard);
   q('[data-kaspi-name]').forEach(e => e.textContent = CONFIG.kaspiName);
-  q('[data-da-display]').forEach(e => e.textContent = 'donationalerts.com/r/' + CONFIG.donationAlerts);
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  document.getElementById('photo').alt = CONFIG.photoAlt;
+  const yrEl = document.getElementById('yr');
+  if (yrEl) yrEl.textContent = new Date().getFullYear();
+  const photoEl = document.getElementById('photo');
+  if (photoEl) photoEl.alt = CONFIG.photoAlt;
   document.title = CONFIG.name + ' — помощь при лудомании';
 
   /* первая кнопка всегда во всю ширину; последняя — если иначе останется дырка */
   const grid = document.querySelector('.links');
-  const items = [...grid.children].filter(el => !el.hidden);
-  items.forEach(el => el.classList.remove('wide'));
-  items[0].classList.add('wide');
-  if ((items.length - 1) % 2) items[items.length - 1].classList.add('wide');
+  const items = grid ? [...grid.children].filter(el => !el.hidden) : [];
+  if (items.length) {
+    items.forEach(el => el.classList.remove('wide'));
+    items[0].classList.add('wide');
+    if ((items.length - 1) % 2) items[items.length - 1].classList.add('wide');
+  }
 
   /* картинка показывается, только если файл реально лежит рядом */
   function optionalImage(imgId, phId){
@@ -548,7 +547,6 @@ const CONFIG = {
     probe.src = el.getAttribute('data-src');
   }
   optionalImage('photo', 'photoPh');
-  optionalImage('kaspiQr', 'kaspiQrPh');
   optionalImage('heroBg', null);
 
   /* копирование */
@@ -571,7 +569,7 @@ const CONFIG = {
     document.body.removeChild(ta);
   }
   q('[data-copy-kaspi]').forEach(b => b.addEventListener('click', () => copy(b, CONFIG.kaspiPhoneCopy)));
-  q('[data-copy-da]').forEach(b => b.addEventListener('click', () => copy(b, daUrl)));
+  q('[data-copy-card]').forEach(b => b.addEventListener('click', () => copy(b, CONFIG.kaspiCardCopy)));
 
   /* шапка при прокрутке */
   const navEl = document.querySelector('nav');
