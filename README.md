@@ -1,24 +1,21 @@
 # Мини-сайт: помощь при лудомании
 
-Одностраничный сайт без сборки и зависимостей. Хостинг — Cloudflare Pages.
+Одностраничный сайт без сборки и зависимостей. Хостинг — GitHub Pages.
 
 ## Структура
 
 ```
-public/              ← всё, что попадает на сайт
-  index.html         разметка и тексты
-  config.js          контакты и реквизиты (меняются здесь)
-  erik.jpg           фото
-  assets/style.css   оформление и анимации
-  assets/app.js      логика: ссылки, копирование, анимации
-  _headers           заголовки безопасности и кэша для Cloudflare
-  robots.txt, sitemap.xml
-wrangler.toml        настройки Cloudflare Pages
+index.html         разметка и тексты
+config.js          контакты и реквизиты (меняются здесь)
+erik.jpg           фото
+assets/style.css   оформление и анимации
+assets/app.js      логика: ссылки, копирование, анимации
+sitemap.xml        карта сайта для поисковиков
 ```
 
 ## Что править
 
-**Контакты и реквизиты** — в `public/config.js`:
+**Контакты и реквизиты** — в `config.js`:
 
 | Поле | Что это |
 |---|---|
@@ -36,41 +33,52 @@ wrangler.toml        настройки Cloudflare Pages
 | `youtube` | Ссылка на канал. Пусто — кнопки YouTube не будет |
 | `youtubeLabel` | Подпись под кнопкой YouTube |
 
-**Тексты** — прямо в `public/index.html`.
+**Тексты** — прямо в `index.html`.
 
-**Фото** — квадратное, файл `public/erik.jpg`. Пока файла нет — на его месте подсказка, сайт не ломается.
+**Фото** — квадратное, файл `erik.jpg`. Пока файла нет — на его месте подсказка, сайт не ломается.
 
 ## Анимации
 
 Все анимации — в конце `assets/style.css` (блок «АНИМАЦИИ») и в `assets/app.js`.
 Если на телефоне включено «Уменьшение движения», сайт показывается сразу, без анимаций.
 
-## Публикация на Cloudflare Pages
+## Сайт опубликован
 
-Сайт: **https://eravais.pages.dev**
+**https://erikogaa.github.io/eravais/**
 
-Обновить сайт после правок:
+Репозиторий: https://github.com/erikogaa/eravais
 
-```bash
-cd "/Users/erikogaj/Ерик Сайт" && npx wrangler pages deploy
-```
+### Как обновить сайт
 
-Wrangler сам возьмёт папку `public/` и имя проекта из `wrangler.toml`.
-Первый раз попросит войти в Cloudflare (`npx wrangler login`).
+Git на этом Маке к GitHub не подключён, поэтому проще всего через браузер:
 
-Без терминала: Cloudflare → **Workers & Pages** → проект `eravais` → **Create deployment** →
-перетащить папку `public`.
+1. Открой https://github.com/erikogaa/eravais
+2. **Add file → Upload files**
+3. Перетащи изменённые файлы. Папку `assets` можно перетащить целиком — файлы с теми же именами заменятся
+4. **Commit changes**
+
+Через 1–2 минуты изменения на сайте. Если не видно — обнови страницу с Cmd+Shift+R.
 
 ### Свой домен (позже)
 
-Cloudflare → Workers & Pages → `eravais` → **Custom domains** → **Set up a domain**.
-Если домен уже в Cloudflare — записи добавятся сами, HTTPS включится автоматически.
-После этого поменяй адрес в `index.html` (`canonical`, `og:url`, `og:image`), `robots.txt` и `sitemap.xml`.
+Купи домен (например `eravais.kz`), затем в репозитории **Settings → Pages → Custom domain**
+впиши его, а у регистратора добавь записи:
+
+```
+A   @   185.199.108.153
+A   @   185.199.109.153
+A   @   185.199.110.153
+A   @   185.199.111.153
+CNAME  www  erikogaa.github.io
+```
+
+HTTPS включится сам (галочка «Enforce HTTPS»). После этого поменяй адрес в `index.html`
+(`canonical`, `og:url`, `og:image`) и в `sitemap.xml`.
 
 ## Локальный просмотр
 
 ```bash
-cd "/Users/erikogaj/Ерик Сайт" && python3 -m http.server 4321 -d public
+cd "/Users/erikogaj/Ерик Сайт" && python3 -m http.server 4321
 ```
 
 Открой http://localhost:4321
