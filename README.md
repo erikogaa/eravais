@@ -1,10 +1,24 @@
 # Мини-сайт: помощь при лудомании
 
-Одностраничный сайт. Один файл `index.html` — без сборки, без зависимостей.
+Одностраничный сайт без сборки и зависимостей. Хостинг — Cloudflare Pages.
+
+## Структура
+
+```
+public/              ← всё, что попадает на сайт
+  index.html         разметка и тексты
+  config.js          контакты и реквизиты (меняются здесь)
+  erik.jpg           фото
+  assets/style.css   оформление и анимации
+  assets/app.js      логика: ссылки, копирование, анимации
+  _headers           заголовки безопасности и кэша для Cloudflare
+  robots.txt, sitemap.xml
+wrangler.toml        настройки Cloudflare Pages
+```
 
 ## Что править
 
-Открой `index.html`, найди в конце файла блок `const CONFIG = {` — **всё меняется только там**:
+**Контакты и реквизиты** — в `public/config.js`:
 
 | Поле | Что это |
 |---|---|
@@ -13,7 +27,7 @@
 | `phoneDisplay` | Как номер показывается на сайте |
 | `telegram` | Ник в Telegram, без `@` |
 | `instagram` | Ник в Instagram, без `@` |
-| `waText` | Готовый текст, который подставится в WhatsApp |
+| `waText` / `waTextFamily` | Готовый текст, который подставится в WhatsApp |
 | `kaspiPhone` | Номер для перевода в Kaspi (как показывать) |
 | `kaspiPhoneCopy` | Что копируется по кнопке — формат `87064254635` |
 | `kaspiCard` | Номер карты Visa (как показывать, с пробелами) |
@@ -22,50 +36,41 @@
 | `youtube` | Ссылка на канал. Пусто — кнопки YouTube не будет |
 | `youtubeLabel` | Подпись под кнопкой YouTube |
 
-## Фото
+**Тексты** — прямо в `public/index.html`.
 
-1. Сохрани свою фотографию (квадратную — она обрезается 1:1) в папку с сайтом.
-2. Назови файл ровно `erik.jpg`.
+**Фото** — квадратное, файл `public/erik.jpg`. Пока файла нет — на его месте подсказка, сайт не ломается.
 
-Фото появится в шапке само. Пока файла нет — на его месте подсказка, сайт не ломается.
-Подпись к фото для поисковиков меняется в `CONFIG.photoAlt`.
+## Анимации
 
-## Сайт опубликован
+Все анимации — в конце `assets/style.css` (блок «АНИМАЦИИ») и в `assets/app.js`.
+Если на телефоне включено «Уменьшение движения», сайт показывается сразу, без анимаций.
 
-**https://erikogaa.github.io/eravais/**
+## Публикация на Cloudflare Pages
 
-Репозиторий: https://github.com/erikogaa/eravais
+Сайт: **https://eravais.pages.dev**
 
-### Как обновить сайт
+Обновить сайт после правок:
 
-Git на этом Маке не настроен, поэтому проще всего через браузер:
-
-1. Открой https://github.com/erikogaa/eravais
-2. **Add file → Upload files**
-3. Перетащи изменённый `index.html` — файл с тем же именем заменится
-4. **Commit changes**
-
-Через 1–2 минуты изменения на сайте. Если не видно — обнови страницу с Cmd+Shift+R.
-
-## Свой домен (позже)
-
-Купи домен (например `eravais.kz`), затем в репозитории **Settings → Pages → Custom domain**
-впиши его, а у регистратора добавь записи:
-
-```
-A   @   185.199.108.153
-A   @   185.199.109.153
-A   @   185.199.110.153
-A   @   185.199.111.153
-CNAME  www  erikogaa.github.io
+```bash
+cd "/Users/erikogaj/Ерик Сайт" && npx wrangler pages deploy
 ```
 
-HTTPS включится сам (галочка «Enforce HTTPS»).
+Wrangler сам возьмёт папку `public/` и имя проекта из `wrangler.toml`.
+Первый раз попросит войти в Cloudflare (`npx wrangler login`).
+
+Без терминала: Cloudflare → **Workers & Pages** → проект `eravais` → **Create deployment** →
+перетащить папку `public`.
+
+### Свой домен (позже)
+
+Cloudflare → Workers & Pages → `eravais` → **Custom domains** → **Set up a domain**.
+Если домен уже в Cloudflare — записи добавятся сами, HTTPS включится автоматически.
+После этого поменяй адрес в `index.html` (`canonical`, `og:url`, `og:image`), `robots.txt` и `sitemap.xml`.
 
 ## Локальный просмотр
 
 ```bash
-cd "/Users/erikogaj/Ерик Сайт" && python3 -m http.server 4321
+cd "/Users/erikogaj/Ерик Сайт" && python3 -m http.server 4321 -d public
 ```
 
 Открой http://localhost:4321
